@@ -1,0 +1,39 @@
+{
+  "name": "bragg-decode-components",
+  "version": "0.0.0",
+  "description": "Decode bragg URI components",
+  "license": "MIT",
+  "repository": "SamVerschueren/bragg-decode-components",
+  "author": {
+    "name": "Sam Verschueren",
+    "email": "sam.verschueren@gmail.com",
+    "url": "github.com/SamVerschueren"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "bragg",
+    "decodeURIComponent",
+    "decoding",
+    "encoding",
+    "querydecode",
+    "paramsdecode",
+    "aws",
+    "lambda"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "*",
+    "xo": "*"
+  },
+  "xo": {
+    "esnext": true
+  }
+}
