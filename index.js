@@ -11,7 +11,7 @@ const decode = obj => {
 
 module.exports = () => {
 	return ctx => {
-		decode(ctx.params);
-		decode(ctx.query);
+		decode(ctx.request.params);
+		decode(ctx.request.query);
 	};
 };

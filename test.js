@@ -1,9 +1,9 @@
 import test from 'ava';
 import m from './';
 
-const decode = ctx => {
-	m()(ctx);
-	return ctx;
+const decode = request => {
+	m()({request});
+	return request;
 };
 
 test(t => {
