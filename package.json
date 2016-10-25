@@ -1,6 +1,6 @@
 {
   "name": "bragg-decode-components",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Decode bragg URI components",
   "license": "MIT",
   "repository": "SamVerschueren/bragg-decode-components",
