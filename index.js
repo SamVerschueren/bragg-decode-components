@@ -5,7 +5,9 @@ const decode = obj => {
 	const keys = Object.keys(obj);
 
 	for (const key of keys) {
-		obj[key] = decodeURIComponent(obj[key]);
+		if (typeof obj[key] === 'string') {
+			obj[key] = decodeURIComponent(obj[key]);
+		}
 	}
 };
 
