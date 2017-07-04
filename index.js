@@ -1,19 +1,25 @@
 'use strict';
+const decodeComponent = require('decode-uri-component');
+
 const decode = obj => {
 	obj = obj || {};
 
-	const keys = Object.keys(obj);
+	const ret = Object.create(null);
 
-	for (const key of keys) {
+	for (const key of Object.keys(obj || {})) {
 		if (typeof obj[key] === 'string') {
-			obj[key] = decodeURIComponent(obj[key]);
+			ret[decodeURIComponent(key)] = decodeComponent(obj[key]);
+		} else {
+			ret[decodeURIComponent(key)] = obj[key];
 		}
 	}
+
+	return ret;
 };
 
 module.exports = () => {
 	return ctx => {
-		decode(ctx.request.params);
-		decode(ctx.request.query);
+		ctx.request.params = decode(ctx.request.params);
+		ctx.request.query = decode(ctx.request.query);
 	};
 };

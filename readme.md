@@ -40,6 +40,7 @@ Decodes the `query` and `params` object of the [bragg](https://github.com/SamVer
 ## Related
 
 - [bragg](https://github.com/SamVerschueren/bragg) - AWS λ web framework
+- [decode-uri-component](https://github.com/SamVerschueren/decode-uri-component) - A better decodeURIComponent
 
 
 ## License
